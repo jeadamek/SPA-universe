@@ -1,0 +1,246 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primay-color: #FFFFFF;
+  --secondary-color: #02799D;
+  --text-color: #E1E1E6;
+  --link-disable: #8D8D99;
+
+  --bg-nav-mobile: rgba(4, 40, 53, 0.9);
+  
+
+  font-size: 62.5%;
+}
+
+body{
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 160%;
+  color: var(--text-color);
+
+  min-height: 100vh;
+}
+
+body, button{
+  font-family: 'Roboto', sans-serif;
+}
+
+body.home{
+  background: url("/assets/mountains-universe-1.png") no-repeat center/cover;
+}
+
+body.universe{
+  background: url("/assets/mountains-universe-2.png") no-repeat center/cover;
+}
+
+body.exploration{
+  background: url("/assets/mountains-universe-3.png") no-repeat center/cover;
+}
+
+nav{
+  display: flex;
+  gap: 3.2rem;
+  justify-content: start;
+
+  font-size: 2.4rem;
+  line-height: 2.2rem;
+  text-align: center;
+  align-items: center;
+  
+  padding: 4rem 7.2rem;
+}
+
+#nav-menu{
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: auto repeat(2, minmax(0, 12rem));
+}
+
+#nav-menu li{
+  list-style: none; 
+}
+
+#nav-menu li {
+  padding: 2rem 0;
+}
+
+#nav-menu a {
+  text-decoration: none;
+  color: var(--link-disable);
+}
+
+#nav-menu a:hover{
+  color: var(--primay-color);
+  font-weight: 700;
+}
+
+#btn-mobile{
+  display: none;
+}
+
+main{
+  display: grid;
+  min-height: 65vh;
+} 
+
+main h1{
+  font-size: 4.8rem;
+  line-height: 125%;
+  margin-bottom: 3.2rem;
+}
+
+main button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primay-color);
+  
+  width: 19.5rem;
+  height: 4.8rem;
+  background: transparent;
+
+  border: 2px solid var(--primay-color);
+  border-radius: 5px;
+
+  transition: background 0.5s;
+}
+
+main button:hover{
+  background-color: var(--primay-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.wrapper-align-left{
+  margin: 6.4rem 10rem;
+  width: 64.8rem;
+}
+
+.wrapper-align-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-self: center;
+  text-align: center;
+}
+
+.wrapper-align-center a {
+  text-decoration: none;
+  color: var(--primay-color);
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.wrapper-align-center a:hover {
+  text-decoration: underline;
+  text-shadow: 0px 0px 18px rgb(255 255 255 / 60%);
+}
+
+/* --------------- MEDIA QUERY --------------- */
+@media (max-width: 800px){
+  .wrapper-align-left{
+    margin: 0;
+    width: 100%;
+    padding: 6.4rem 7.2rem;
+  }
+}
+
+@media (max-width: 600px){
+  nav{
+    justify-content: space-between;
+    padding: 3.2rem;
+  
+    background-color: var(--bg-nav-mobile);
+  }
+
+  #nav-menu{
+    display: block;
+    height: 0;
+    width: 100%;
+      
+    position: absolute;
+    top: 11rem;
+    right: 0;
+  
+    background-color: var(--bg-nav-mobile);
+    z-index: 1000;
+  
+    visibility: hidden;
+    overflow-y: hidden;
+    transition: .6s;
+  }
+  
+  nav.active #nav-menu{
+    height: calc(100vh - 11rem);
+    visibility: visible;
+  }
+
+  #btn-mobile{
+    display: flex;
+    gap: .5rem;
+
+    border: none;
+    background: none;
+
+    font-size: 1.6rem;
+    
+    padding: 1rem;
+    cursor: pointer;
+
+    color: var(--primay-color);
+  }
+  
+  #hamburger{
+    border-top: 2px solid;
+    width: 3.6rem;
+    height: 2.6rem;
+  }
+
+  #hamburger::after, #hamburger::before{
+    content: '';
+    display: block;
+    width: 3.6rem;
+    height: 2px;
+    background: currentColor;
+    margin-top: 1rem;
+    transition: .3s;
+    position: relative;
+  }
+
+  nav.active #hamburger{
+    border-top-color: transparent;
+  }
+
+  nav.active #hamburger::after{
+    transform: rotate(135deg);
+    position: absolute;
+    top: 44px;
+  }
+
+  nav.active #hamburger::before{
+    transform: rotate(-135deg);
+  }
+
+  main h1{
+    font-size: 3.6rem;
+    line-height: 125%;
+    margin-bottom: 2.8rem;
+  }
+
+  .wrapper-align-left{
+    padding: 6.4rem 7.2rem;
+    margin: 0;
+  }
+
+}
