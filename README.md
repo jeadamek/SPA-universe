@@ -15,7 +15,7 @@
 
 ## ✏️ About
 
-This is a project developed on Stage 6 in the Explorer course at the [Rocketseat School](https://www.rocketseat.com.br/). To access the entire course's projects [click on this link](https://github.com/jeadamek/explorer-rocketseat). 
+This project was developed on Stage 6 in the Explorer course at [Rocketseat School](https://www.rocketseat.com.br/). To access the entire course assignments click [this link](https://github.com/jeadamek/explorer-rocketseat). 
 
 The project's main goal was to build a SPA (Single Page Application).
 Instead of reloading the entire page or redirecting the user to a new page, the main content is the only element that is updated asynchronously, keeping the entire page structure static.
@@ -38,6 +38,7 @@ The app should display three different pages and change the default routes for e
 - Breakpoints with media query;
 - Reset CSS removing possible inconsistencies between different browsers;
 - File system structure of the project separated by folder.
+
 
 
 ### The project can be seen in the images below:<br/>
@@ -92,6 +93,11 @@ $ npm start
 
 ## 🎨 Layout
 🔗 [View on Figma](https://www.figma.com/file/7mbS2kL4uuWfQyLYjnWE9a/%5BDesafios-Explorer%5D-SPA-Universe-(Copy)?node-id=104%3A48&t=zhinmAGAXb06Kc5a-1)
+
+
+## 📝 License
+
+This project is under the MIT license. See the file [LICENSE](LICENSE) for more details.
 
 
 ## 🎯 Author
